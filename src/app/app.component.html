@@ -1,3 +1,59 @@
-<h1>
-  {{title}}
-</h1>
+<div class='container' *ngIf="characterSelect">
+  <h1>Character Select</h1>
+
+  <section class='playerOne'>
+    <div class='nameSelection'>
+      <span>Player 1 Character Selected: {{ playerOne }}</span>
+    </div>
+    <div class='heroes'>
+      <div (click)="playerOneCharacter('Smiley')" class="character Smiley"></div>
+      <div (click)="playerOneCharacter('Confused')" class="character Confused"></div>
+      <div (click)="playerOneCharacter('Happy')" class="character Happy"></div>
+      <div (click)="playerOneCharacter('Distracted')" class="character Distracted"></div>
+    </div>
+  </section>
+
+  <section class='playerTwo'>
+    <div class='nameSelection'>
+      <span>Player 2 Character Selected: {{ playerTwo }}</span>
+    </div>
+    <div class='heroes'>
+      <div (click)="playerTwoCharacter('Scared')" class="character Scared"></div>
+      <div (click)="playerTwoCharacter('Successful')" class="character Successful"></div>
+      <div (click)="playerTwoCharacter('Outraged')" class="character Outraged"></div>
+      <div (click)="playerTwoCharacter('Suprised')" class="character Suprised"></div>
+    </div>
+  </section>
+
+  <section class='battle'>
+    <button (click)="battleCheck()">Battle!</button>
+  </section>
+</div>
+
+
+
+<div class='container arena' *ngIf="!characterSelect">
+  <h1>Arena</h1>
+
+  <section class="left">
+    <h3>{{playerOne}}</h3>
+    <h2>{{playerOneHealth}}</h2>
+    <div class="character {{playerOne}}"></div>
+    <div>
+      <button [disabled]="currentTurn == 2" (click)="attack('playerTwo')" class='attack'>Attack!</button>
+      <button [disabled]="currentTurn == 2" (click)="heal('playerOne')"class='heal'>Heal!</button>
+    </div>
+  </section>
+
+  <section class="right">
+    <h3>{{playerTwo}}</h3>
+    <h2>{{playerTwoHealth}}</h2>
+    <div class="character {{playerTwo}}"></div>
+    <div>
+      <button [disabled]="currentTurn == 1" (click)="attack('playerOne')" class='attack'>Attack!</button>
+      <button [disabled]="currentTurn == 1" (click)="heal('playerTwo')"class='heal'>Heal!</button>
+    </div>
+  </section>
+
+</div>
+

@@ -1,0 +1,104 @@
+/** {
+    outline: 1px dotted red;
+}*/
+div.container {
+    width: 970px;
+    min-height: 500px;
+    text-align: center;
+}
+section {
+    text-align: left;
+}
+section div.nameSelection {
+    padding-left: 170px;
+}
+section span,
+section input {
+    font-size: 2em;
+    font-weight: bold;
+}
+section.battle {
+    text-align: right;
+}
+section.battle button {
+    font-size: 2em;
+    margin: 10px;
+    padding: 0px 50px 0px 50px;
+    background-color: firebrick;
+    color: white;
+    
+}
+div.heroes {
+    text-align: center;
+    padding: 10px;
+}
+
+
+div.character {
+    background-image: url('../assets/heroes.png');
+    background-repeat: no-repeat;
+    margin-left: 40px;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+}
+
+div.Smiley {
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+div.Confused {
+    background-position-x: -160px;
+    background-position-y: 0px;
+}
+div.Happy {
+    background-position-x: -320px;
+    background-position-y: 0px;
+}
+div.Distracted {
+    background-position-x: 0px;
+    background-position-y: -145px;
+}
+div.Scared {
+    background-position-x: -165px;
+    background-position-y: -145px;
+}
+div.Successful {
+    background-position-x: -325px;
+    background-position-y: -145px;
+}
+div.Outraged {
+    background-position-x: 0px;
+    background-position-y: -290px;
+}
+div.Surprised {
+    background-position-x: -160px;
+    background-position-y: -290px;
+}
+
+div.arena section {
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+div.arena section div.character{
+    margin: 0px;
+}
+div.arena section div {
+    text-align: center;
+}
+div.arena section button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.5em;
+    width: 175px;
+}
+button.attack {
+    background-color: lightblue;
+}
+button.heal {
+    background-color: lightgreen;
+}
